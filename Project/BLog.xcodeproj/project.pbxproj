@@ -1,0 +1,1255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7602904A220644D500698ECC /* StandardLogEntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76029049220644D500698ECC /* StandardLogEntryFormatter.swift */; };
+		7602904D22064D9C00698ECC /* StandardLogEntryFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7602904C22064D9C00698ECC /* StandardLogEntryFormatterTests.swift */; };
+		763ED4E321E3B89E00AFEBEE /* BLogMock.h in Headers */ = {isa = PBXBuildFile; fileRef = 763ED4E121E3B89E00AFEBEE /* BLogMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		763ED50C21E415D000AFEBEE /* LogEntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4EA21E415D000AFEBEE /* LogEntryFormatter.swift */; };
+		763ED50D21E415D000AFEBEE /* LogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4EC21E415D000AFEBEE /* LogDestination.swift */; };
+		763ED50F21E415D000AFEBEE /* ConsoleLogOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4F021E415D000AFEBEE /* ConsoleLogOutput.swift */; };
+		763ED51021E415D000AFEBEE /* LogFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4F221E415D000AFEBEE /* LogFile.swift */; };
+		763ED51121E415D000AFEBEE /* FileLogOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4F321E415D000AFEBEE /* FileLogOutput.swift */; };
+		763ED51321E415D000AFEBEE /* FileLogAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4F521E415D000AFEBEE /* FileLogAssembler.swift */; };
+		763ED51421E415D000AFEBEE /* FileLogConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4F621E415D000AFEBEE /* FileLogConfiguration.swift */; };
+		763ED51521E415D000AFEBEE /* LogDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4F821E415D000AFEBEE /* LogDispatcher.swift */; };
+		763ED51621E415D000AFEBEE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4FA21E415D000AFEBEE /* Log.swift */; };
+		763ED51721E415D000AFEBEE /* FormattedLogOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4FC21E415D000AFEBEE /* FormattedLogOutput.swift */; };
+		763ED51821E415D000AFEBEE /* LogAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED4FE21E415D000AFEBEE /* LogAssembler.swift */; };
+		763ED51921E415D000AFEBEE /* TextError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED50021E415D000AFEBEE /* TextError.swift */; };
+		763ED51A21E415D000AFEBEE /* LogExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED50221E415D000AFEBEE /* LogExporter.swift */; };
+		763ED51B21E415D000AFEBEE /* LogEntryMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED50421E415D000AFEBEE /* LogEntryMessage.swift */; };
+		763ED51C21E415D000AFEBEE /* LogEntryMessageKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED50521E415D000AFEBEE /* LogEntryMessageKind.swift */; };
+		763ED51D21E415D000AFEBEE /* LogEntrySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED50621E415D000AFEBEE /* LogEntrySource.swift */; };
+		763ED51E21E415D000AFEBEE /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED50721E415D000AFEBEE /* LogEntry.swift */; };
+		763ED51F21E415D000AFEBEE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED50921E415D000AFEBEE /* Logger.swift */; };
+		763ED52021E415D000AFEBEE /* FormattedLogWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED50B21E415D000AFEBEE /* FormattedLogWriter.swift */; };
+		763ED54021E415F100AFEBEE /* FormattedLogWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED52521E415F100AFEBEE /* FormattedLogWriterTests.swift */; };
+		763ED54221E415F100AFEBEE /* FileLogConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED52A21E415F100AFEBEE /* FileLogConfigurationTests.swift */; };
+		763ED54321E415F100AFEBEE /* FileLoggerHeavyLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED52B21E415F100AFEBEE /* FileLoggerHeavyLoadTests.swift */; };
+		763ED54421E415F100AFEBEE /* FileLogAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED52C21E415F100AFEBEE /* FileLogAssemblerTests.swift */; };
+		763ED54621E415F100AFEBEE /* FileLogOutputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED52E21E415F100AFEBEE /* FileLogOutputTests.swift */; };
+		763ED54721E415F100AFEBEE /* LogFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED52F21E415F100AFEBEE /* LogFileTests.swift */; };
+		763ED54821E415F100AFEBEE /* LogEntryFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED53121E415F100AFEBEE /* LogEntryFormatterTests.swift */; };
+		763ED54921E415F100AFEBEE /* LogDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED53321E415F100AFEBEE /* LogDispatcherTests.swift */; };
+		763ED54A21E415F100AFEBEE /* LogExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED53521E415F100AFEBEE /* LogExporterTests.swift */; };
+		763ED55121E415F100AFEBEE /* LogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED53F21E415F100AFEBEE /* LogTests.swift */; };
+		763ED55C21E43EA100AFEBEE /* FormattedLogOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED55321E43EA000AFEBEE /* FormattedLogOutputMock.swift */; };
+		763ED55D21E43EA100AFEBEE /* LogAssemblerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED55521E43EA000AFEBEE /* LogAssemblerMock.swift */; };
+		763ED55E21E43EA100AFEBEE /* LogDestinationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED55721E43EA000AFEBEE /* LogDestinationMock.swift */; };
+		763ED55F21E43EA100AFEBEE /* LoggerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED55921E43EA000AFEBEE /* LoggerMock.swift */; };
+		763ED56021E43EA100AFEBEE /* LogEntryFormatterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED55B21E43EA100AFEBEE /* LogEntryFormatterMock.swift */; };
+		763ED56421E43EE700AFEBEE /* BLogMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 763ED4DF21E3B89D00AFEBEE /* BLogMock.framework */; };
+		763ED56B21E5009700AFEBEE /* Collector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED56821E5009700AFEBEE /* Collector.swift */; };
+		763ED56C21E5009700AFEBEE /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763ED56A21E5009700AFEBEE /* Directory.swift */; };
+		769D6CF821DC28A6008C1836 /* BLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769D6CEE21DC28A6008C1836 /* BLog.framework */; };
+		769D6CFF21DC28A6008C1836 /* BLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 769D6CF121DC28A6008C1836 /* BLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C7599921E8EC0F00FD99AF /* LogDestinationMockSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7599821E8EC0F00FD99AF /* LogDestinationMockSupport.swift */; };
+		76C7599C21E8EC3E00FD99AF /* LogAssemblerMockSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7599B21E8EC3E00FD99AF /* LogAssemblerMockSupport.swift */; };
+		76C7599F21E8EF8400FD99AF /* LogLoggingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7599D21E8EF8300FD99AF /* LogLoggingTests.swift */; };
+		76C759A021E8EF8400FD99AF /* LogExportingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7599E21E8EF8400FD99AF /* LogExportingTests.swift */; };
+		76C759A321E8F0D700FD99AF /* LoggerMockSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C759A221E8F0D700FD99AF /* LoggerMockSupport.swift */; };
+		76C759A721E8F55C00FD99AF /* FormattedLogOutputMockSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C759A621E8F55C00FD99AF /* FormattedLogOutputMockSupport.swift */; };
+		76ECCE2121EB7EBB00192673 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECCE2021EB7EBB00192673 /* AppDelegate.swift */; };
+		76ECCE2321EB7EBB00192673 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECCE2221EB7EBB00192673 /* ViewController.swift */; };
+		76ECCE2621EB7EBB00192673 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76ECCE2421EB7EBB00192673 /* Main.storyboard */; };
+		76ECCE2821EB7EBD00192673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76ECCE2721EB7EBD00192673 /* Assets.xcassets */; };
+		76ECCE2B21EB7EBD00192673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76ECCE2921EB7EBD00192673 /* LaunchScreen.storyboard */; };
+		76ECCE3021EB7F1600192673 /* BLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769D6CEE21DC28A6008C1836 /* BLog.framework */; };
+		76ECCE3321EB866100192673 /* LoggerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECCE3221EB866100192673 /* LoggerFactory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		763ED4E721E3B8C400AFEBEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 769D6CE521DC28A6008C1836 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 769D6CED21DC28A6008C1836;
+			remoteInfo = BLog;
+		};
+		763ED56121E43ED900AFEBEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 769D6CE521DC28A6008C1836 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 763ED4DE21E3B89D00AFEBEE;
+			remoteInfo = BLogMock;
+		};
+		769D6CF921DC28A6008C1836 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 769D6CE521DC28A6008C1836 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 769D6CED21DC28A6008C1836;
+			remoteInfo = BLog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		76029049220644D500698ECC /* StandardLogEntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLogEntryFormatter.swift; sourceTree = "<group>"; };
+		7602904C22064D9C00698ECC /* StandardLogEntryFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLogEntryFormatterTests.swift; sourceTree = "<group>"; };
+		763ED4DF21E3B89D00AFEBEE /* BLogMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLogMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		763ED4E121E3B89E00AFEBEE /* BLogMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLogMock.h; sourceTree = "<group>"; };
+		763ED4E221E3B89E00AFEBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		763ED4EA21E415D000AFEBEE /* LogEntryFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntryFormatter.swift; sourceTree = "<group>"; };
+		763ED4EC21E415D000AFEBEE /* LogDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDestination.swift; sourceTree = "<group>"; };
+		763ED4F021E415D000AFEBEE /* ConsoleLogOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleLogOutput.swift; sourceTree = "<group>"; };
+		763ED4F221E415D000AFEBEE /* LogFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFile.swift; sourceTree = "<group>"; };
+		763ED4F321E415D000AFEBEE /* FileLogOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLogOutput.swift; sourceTree = "<group>"; };
+		763ED4F521E415D000AFEBEE /* FileLogAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLogAssembler.swift; sourceTree = "<group>"; };
+		763ED4F621E415D000AFEBEE /* FileLogConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLogConfiguration.swift; sourceTree = "<group>"; };
+		763ED4F821E415D000AFEBEE /* LogDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDispatcher.swift; sourceTree = "<group>"; };
+		763ED4FA21E415D000AFEBEE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		763ED4FC21E415D000AFEBEE /* FormattedLogOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedLogOutput.swift; sourceTree = "<group>"; };
+		763ED4FE21E415D000AFEBEE /* LogAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogAssembler.swift; sourceTree = "<group>"; };
+		763ED50021E415D000AFEBEE /* TextError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextError.swift; sourceTree = "<group>"; };
+		763ED50221E415D000AFEBEE /* LogExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogExporter.swift; sourceTree = "<group>"; };
+		763ED50421E415D000AFEBEE /* LogEntryMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntryMessage.swift; sourceTree = "<group>"; };
+		763ED50521E415D000AFEBEE /* LogEntryMessageKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntryMessageKind.swift; sourceTree = "<group>"; };
+		763ED50621E415D000AFEBEE /* LogEntrySource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntrySource.swift; sourceTree = "<group>"; };
+		763ED50721E415D000AFEBEE /* LogEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
+		763ED50921E415D000AFEBEE /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		763ED50B21E415D000AFEBEE /* FormattedLogWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedLogWriter.swift; sourceTree = "<group>"; };
+		763ED52521E415F100AFEBEE /* FormattedLogWriterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedLogWriterTests.swift; sourceTree = "<group>"; };
+		763ED52A21E415F100AFEBEE /* FileLogConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLogConfigurationTests.swift; sourceTree = "<group>"; };
+		763ED52B21E415F100AFEBEE /* FileLoggerHeavyLoadTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLoggerHeavyLoadTests.swift; sourceTree = "<group>"; };
+		763ED52C21E415F100AFEBEE /* FileLogAssemblerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLogAssemblerTests.swift; sourceTree = "<group>"; };
+		763ED52E21E415F100AFEBEE /* FileLogOutputTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLogOutputTests.swift; sourceTree = "<group>"; };
+		763ED52F21E415F100AFEBEE /* LogFileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFileTests.swift; sourceTree = "<group>"; };
+		763ED53121E415F100AFEBEE /* LogEntryFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntryFormatterTests.swift; sourceTree = "<group>"; };
+		763ED53321E415F100AFEBEE /* LogDispatcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDispatcherTests.swift; sourceTree = "<group>"; };
+		763ED53521E415F100AFEBEE /* LogExporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogExporterTests.swift; sourceTree = "<group>"; };
+		763ED53F21E415F100AFEBEE /* LogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTests.swift; sourceTree = "<group>"; };
+		763ED55321E43EA000AFEBEE /* FormattedLogOutputMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedLogOutputMock.swift; sourceTree = "<group>"; };
+		763ED55521E43EA000AFEBEE /* LogAssemblerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogAssemblerMock.swift; sourceTree = "<group>"; };
+		763ED55721E43EA000AFEBEE /* LogDestinationMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDestinationMock.swift; sourceTree = "<group>"; };
+		763ED55921E43EA000AFEBEE /* LoggerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerMock.swift; sourceTree = "<group>"; };
+		763ED55B21E43EA100AFEBEE /* LogEntryFormatterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntryFormatterMock.swift; sourceTree = "<group>"; };
+		763ED56521E4F91F00AFEBEE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		763ED56821E5009700AFEBEE /* Collector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collector.swift; sourceTree = "<group>"; };
+		763ED56A21E5009700AFEBEE /* Directory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
+		769D6CEE21DC28A6008C1836 /* BLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		769D6CF121DC28A6008C1836 /* BLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLog.h; sourceTree = "<group>"; };
+		769D6CF221DC28A6008C1836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		769D6CF721DC28A6008C1836 /* BLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		769D6CFE21DC28A6008C1836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76C7599821E8EC0F00FD99AF /* LogDestinationMockSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDestinationMockSupport.swift; sourceTree = "<group>"; };
+		76C7599B21E8EC3E00FD99AF /* LogAssemblerMockSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogAssemblerMockSupport.swift; sourceTree = "<group>"; };
+		76C7599D21E8EF8300FD99AF /* LogLoggingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLoggingTests.swift; sourceTree = "<group>"; };
+		76C7599E21E8EF8400FD99AF /* LogExportingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogExportingTests.swift; sourceTree = "<group>"; };
+		76C759A221E8F0D700FD99AF /* LoggerMockSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerMockSupport.swift; sourceTree = "<group>"; };
+		76C759A621E8F55C00FD99AF /* FormattedLogOutputMockSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedLogOutputMockSupport.swift; sourceTree = "<group>"; };
+		76ECCE1E21EB7EBB00192673 /* BLogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76ECCE2021EB7EBB00192673 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76ECCE2221EB7EBB00192673 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76ECCE2521EB7EBB00192673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76ECCE2721EB7EBD00192673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76ECCE2A21EB7EBD00192673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76ECCE2C21EB7EBD00192673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76ECCE3221EB866100192673 /* LoggerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerFactory.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		763ED4DC21E3B89D00AFEBEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		769D6CEB21DC28A6008C1836 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		769D6CF421DC28A6008C1836 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				769D6CF821DC28A6008C1836 /* BLog.framework in Frameworks */,
+				763ED56421E43EE700AFEBEE /* BLogMock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76ECCE1B21EB7EBB00192673 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76ECCE3021EB7F1600192673 /* BLog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7602904B22064D8400698ECC /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				7602904C22064D9C00698ECC /* StandardLogEntryFormatterTests.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
+		763ED4E021E3B89E00AFEBEE /* BLogMock */ = {
+			isa = PBXGroup;
+			children = (
+				763ED55421E43EA000AFEBEE /* Assembler */,
+				763ED4E121E3B89E00AFEBEE /* BLogMock.h */,
+				763ED55621E43EA000AFEBEE /* Destination */,
+				763ED55A21E43EA100AFEBEE /* Formatter */,
+				763ED4E221E3B89E00AFEBEE /* Info.plist */,
+				763ED55821E43EA000AFEBEE /* Logger */,
+				763ED55221E43EA000AFEBEE /* Output */,
+			);
+			path = BLogMock;
+			sourceTree = "<group>";
+		};
+		763ED4E921E415D000AFEBEE /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4EA21E415D000AFEBEE /* LogEntryFormatter.swift */,
+				76029049220644D500698ECC /* StandardLogEntryFormatter.swift */,
+			);
+			name = Formatter;
+			path = ../../Sources/BLog/Formatter;
+			sourceTree = "<group>";
+		};
+		763ED4EB21E415D000AFEBEE /* Destination */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4EC21E415D000AFEBEE /* LogDestination.swift */,
+			);
+			name = Destination;
+			path = ../../Sources/BLog/Destination;
+			sourceTree = "<group>";
+		};
+		763ED4ED21E415D000AFEBEE /* Loggers */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4EE21E415D000AFEBEE /* ConsoleLogger */,
+				763ED4F121E415D000AFEBEE /* FileLogger */,
+			);
+			name = Loggers;
+			path = ../../Sources/BLog/Loggers;
+			sourceTree = "<group>";
+		};
+		763ED4EE21E415D000AFEBEE /* ConsoleLogger */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4F021E415D000AFEBEE /* ConsoleLogOutput.swift */,
+			);
+			path = ConsoleLogger;
+			sourceTree = "<group>";
+		};
+		763ED4F121E415D000AFEBEE /* FileLogger */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4F221E415D000AFEBEE /* LogFile.swift */,
+				763ED4F321E415D000AFEBEE /* FileLogOutput.swift */,
+				763ED4F521E415D000AFEBEE /* FileLogAssembler.swift */,
+				763ED4F621E415D000AFEBEE /* FileLogConfiguration.swift */,
+			);
+			path = FileLogger;
+			sourceTree = "<group>";
+		};
+		763ED4F721E415D000AFEBEE /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4F821E415D000AFEBEE /* LogDispatcher.swift */,
+			);
+			name = Dispatcher;
+			path = ../../Sources/BLog/Dispatcher;
+			sourceTree = "<group>";
+		};
+		763ED4F921E415D000AFEBEE /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4FA21E415D000AFEBEE /* Log.swift */,
+			);
+			name = Log;
+			path = ../../Sources/BLog/Log;
+			sourceTree = "<group>";
+		};
+		763ED4FB21E415D000AFEBEE /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4FC21E415D000AFEBEE /* FormattedLogOutput.swift */,
+			);
+			name = Output;
+			path = ../../Sources/BLog/Output;
+			sourceTree = "<group>";
+		};
+		763ED4FD21E415D000AFEBEE /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4FE21E415D000AFEBEE /* LogAssembler.swift */,
+			);
+			name = Assembler;
+			path = ../../Sources/BLog/Assembler;
+			sourceTree = "<group>";
+		};
+		763ED4FF21E415D000AFEBEE /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				763ED50021E415D000AFEBEE /* TextError.swift */,
+			);
+			name = Error;
+			path = ../../Sources/BLog/Error;
+			sourceTree = "<group>";
+		};
+		763ED50121E415D000AFEBEE /* Exporter */ = {
+			isa = PBXGroup;
+			children = (
+				763ED50221E415D000AFEBEE /* LogExporter.swift */,
+			);
+			name = Exporter;
+			path = ../../Sources/BLog/Exporter;
+			sourceTree = "<group>";
+		};
+		763ED50321E415D000AFEBEE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				763ED50421E415D000AFEBEE /* LogEntryMessage.swift */,
+				763ED50521E415D000AFEBEE /* LogEntryMessageKind.swift */,
+				763ED50621E415D000AFEBEE /* LogEntrySource.swift */,
+				763ED50721E415D000AFEBEE /* LogEntry.swift */,
+			);
+			name = Data;
+			path = ../../Sources/BLog/Data;
+			sourceTree = "<group>";
+		};
+		763ED50821E415D000AFEBEE /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				763ED50921E415D000AFEBEE /* Logger.swift */,
+			);
+			name = Logger;
+			path = ../../Sources/BLog/Logger;
+			sourceTree = "<group>";
+		};
+		763ED50A21E415D000AFEBEE /* Writer */ = {
+			isa = PBXGroup;
+			children = (
+				763ED50B21E415D000AFEBEE /* FormattedLogWriter.swift */,
+			);
+			name = Writer;
+			path = ../../Sources/BLog/Writer;
+			sourceTree = "<group>";
+		};
+		763ED52421E415F100AFEBEE /* Writer */ = {
+			isa = PBXGroup;
+			children = (
+				763ED52521E415F100AFEBEE /* FormattedLogWriterTests.swift */,
+			);
+			name = Writer;
+			path = ../../Tests/BLogTests/Writer;
+			sourceTree = "<group>";
+		};
+		763ED52621E415F100AFEBEE /* Loggers */ = {
+			isa = PBXGroup;
+			children = (
+				763ED52921E415F100AFEBEE /* FileLogger */,
+			);
+			name = Loggers;
+			path = ../../Tests/BLogTests/Loggers;
+			sourceTree = "<group>";
+		};
+		763ED52921E415F100AFEBEE /* FileLogger */ = {
+			isa = PBXGroup;
+			children = (
+				763ED52A21E415F100AFEBEE /* FileLogConfigurationTests.swift */,
+				763ED52B21E415F100AFEBEE /* FileLoggerHeavyLoadTests.swift */,
+				763ED52C21E415F100AFEBEE /* FileLogAssemblerTests.swift */,
+				763ED52E21E415F100AFEBEE /* FileLogOutputTests.swift */,
+				763ED52F21E415F100AFEBEE /* LogFileTests.swift */,
+			);
+			path = FileLogger;
+			sourceTree = "<group>";
+		};
+		763ED53021E415F100AFEBEE /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				763ED53121E415F100AFEBEE /* LogEntryFormatterTests.swift */,
+			);
+			name = Formatter;
+			path = ../../Tests/BLogTests/Formatter;
+			sourceTree = "<group>";
+		};
+		763ED53221E415F100AFEBEE /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				763ED53321E415F100AFEBEE /* LogDispatcherTests.swift */,
+			);
+			name = Dispatcher;
+			path = ../../Tests/BLogTests/Dispatcher;
+			sourceTree = "<group>";
+		};
+		763ED53421E415F100AFEBEE /* Exporter */ = {
+			isa = PBXGroup;
+			children = (
+				763ED53521E415F100AFEBEE /* LogExporterTests.swift */,
+			);
+			name = Exporter;
+			path = ../../Tests/BLogTests/Exporter;
+			sourceTree = "<group>";
+		};
+		763ED53C21E415F100AFEBEE /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				763ED56721E5009700AFEBEE /* Collector */,
+				763ED56921E5009700AFEBEE /* Directory */,
+				76C759A521E8F53400FD99AF /* FormattedLogOutputMock */,
+				76C7599A21E8EC2100FD99AF /* LogAssemblerMock */,
+				76C7599721E8EBE300FD99AF /* LogDestinationMock */,
+				76C759A121E8F01E00FD99AF /* LoggerMock */,
+			);
+			name = Support;
+			path = ../../Tests/BLogTests/Support;
+			sourceTree = "<group>";
+		};
+		763ED53E21E415F100AFEBEE /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				76C7599E21E8EF8400FD99AF /* LogExportingTests.swift */,
+				76C7599D21E8EF8300FD99AF /* LogLoggingTests.swift */,
+				763ED53F21E415F100AFEBEE /* LogTests.swift */,
+			);
+			name = Log;
+			path = ../../Tests/BLogTests/Log;
+			sourceTree = "<group>";
+		};
+		763ED55221E43EA000AFEBEE /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				763ED55321E43EA000AFEBEE /* FormattedLogOutputMock.swift */,
+			);
+			name = Output;
+			path = ../../Sources/BlogMock/Output;
+			sourceTree = "<group>";
+		};
+		763ED55421E43EA000AFEBEE /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				763ED55521E43EA000AFEBEE /* LogAssemblerMock.swift */,
+			);
+			name = Assembler;
+			path = ../../Sources/BlogMock/Assembler;
+			sourceTree = "<group>";
+		};
+		763ED55621E43EA000AFEBEE /* Destination */ = {
+			isa = PBXGroup;
+			children = (
+				763ED55721E43EA000AFEBEE /* LogDestinationMock.swift */,
+			);
+			name = Destination;
+			path = ../../Sources/BlogMock/Destination;
+			sourceTree = "<group>";
+		};
+		763ED55821E43EA000AFEBEE /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				763ED55921E43EA000AFEBEE /* LoggerMock.swift */,
+			);
+			name = Logger;
+			path = ../../Sources/BlogMock/Logger;
+			sourceTree = "<group>";
+		};
+		763ED55A21E43EA100AFEBEE /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				763ED55B21E43EA100AFEBEE /* LogEntryFormatterMock.swift */,
+			);
+			name = Formatter;
+			path = ../../Sources/BlogMock/Formatter;
+			sourceTree = "<group>";
+		};
+		763ED56321E43EE700AFEBEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				763ED56521E4F91F00AFEBEE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		763ED56721E5009700AFEBEE /* Collector */ = {
+			isa = PBXGroup;
+			children = (
+				763ED56821E5009700AFEBEE /* Collector.swift */,
+			);
+			path = Collector;
+			sourceTree = "<group>";
+		};
+		763ED56921E5009700AFEBEE /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				763ED56A21E5009700AFEBEE /* Directory.swift */,
+			);
+			path = Directory;
+			sourceTree = "<group>";
+		};
+		769D6CE421DC28A6008C1836 = {
+			isa = PBXGroup;
+			children = (
+				769D6CF021DC28A6008C1836 /* BLog */,
+				763ED4E021E3B89E00AFEBEE /* BLogMock */,
+				769D6CFB21DC28A6008C1836 /* BLogTests */,
+				76ECCE1F21EB7EBB00192673 /* BLogDemo */,
+				769D6CEF21DC28A6008C1836 /* Products */,
+				763ED56321E43EE700AFEBEE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		769D6CEF21DC28A6008C1836 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				769D6CEE21DC28A6008C1836 /* BLog.framework */,
+				769D6CF721DC28A6008C1836 /* BLogTests.xctest */,
+				763ED4DF21E3B89D00AFEBEE /* BLogMock.framework */,
+				76ECCE1E21EB7EBB00192673 /* BLogDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		769D6CF021DC28A6008C1836 /* BLog */ = {
+			isa = PBXGroup;
+			children = (
+				763ED4FD21E415D000AFEBEE /* Assembler */,
+				769D6CF121DC28A6008C1836 /* BLog.h */,
+				763ED50321E415D000AFEBEE /* Data */,
+				763ED4EB21E415D000AFEBEE /* Destination */,
+				763ED4F721E415D000AFEBEE /* Dispatcher */,
+				763ED4FF21E415D000AFEBEE /* Error */,
+				763ED50121E415D000AFEBEE /* Exporter */,
+				76ECCE3121EB866100192673 /* Factory */,
+				763ED4E921E415D000AFEBEE /* Formatter */,
+				769D6CF221DC28A6008C1836 /* Info.plist */,
+				763ED4F921E415D000AFEBEE /* Log */,
+				763ED50821E415D000AFEBEE /* Logger */,
+				763ED4ED21E415D000AFEBEE /* Loggers */,
+				763ED4FB21E415D000AFEBEE /* Output */,
+				763ED50A21E415D000AFEBEE /* Writer */,
+			);
+			path = BLog;
+			sourceTree = "<group>";
+		};
+		769D6CFB21DC28A6008C1836 /* BLogTests */ = {
+			isa = PBXGroup;
+			children = (
+				763ED53221E415F100AFEBEE /* Dispatcher */,
+				763ED53421E415F100AFEBEE /* Exporter */,
+				7602904B22064D8400698ECC /* Formatter */,
+				763ED53021E415F100AFEBEE /* Formatter */,
+				769D6CFE21DC28A6008C1836 /* Info.plist */,
+				763ED53E21E415F100AFEBEE /* Log */,
+				763ED52621E415F100AFEBEE /* Loggers */,
+				763ED53C21E415F100AFEBEE /* Support */,
+				763ED52421E415F100AFEBEE /* Writer */,
+			);
+			path = BLogTests;
+			sourceTree = "<group>";
+		};
+		76C7599721E8EBE300FD99AF /* LogDestinationMock */ = {
+			isa = PBXGroup;
+			children = (
+				76C7599821E8EC0F00FD99AF /* LogDestinationMockSupport.swift */,
+			);
+			path = LogDestinationMock;
+			sourceTree = "<group>";
+		};
+		76C7599A21E8EC2100FD99AF /* LogAssemblerMock */ = {
+			isa = PBXGroup;
+			children = (
+				76C7599B21E8EC3E00FD99AF /* LogAssemblerMockSupport.swift */,
+			);
+			path = LogAssemblerMock;
+			sourceTree = "<group>";
+		};
+		76C759A121E8F01E00FD99AF /* LoggerMock */ = {
+			isa = PBXGroup;
+			children = (
+				76C759A221E8F0D700FD99AF /* LoggerMockSupport.swift */,
+			);
+			path = LoggerMock;
+			sourceTree = "<group>";
+		};
+		76C759A521E8F53400FD99AF /* FormattedLogOutputMock */ = {
+			isa = PBXGroup;
+			children = (
+				76C759A621E8F55C00FD99AF /* FormattedLogOutputMockSupport.swift */,
+			);
+			path = FormattedLogOutputMock;
+			sourceTree = "<group>";
+		};
+		76ECCE1F21EB7EBB00192673 /* BLogDemo */ = {
+			isa = PBXGroup;
+			children = (
+				76ECCE2021EB7EBB00192673 /* AppDelegate.swift */,
+				76ECCE2221EB7EBB00192673 /* ViewController.swift */,
+				76ECCE2421EB7EBB00192673 /* Main.storyboard */,
+				76ECCE2721EB7EBD00192673 /* Assets.xcassets */,
+				76ECCE2921EB7EBD00192673 /* LaunchScreen.storyboard */,
+				76ECCE2C21EB7EBD00192673 /* Info.plist */,
+			);
+			path = BLogDemo;
+			sourceTree = "<group>";
+		};
+		76ECCE3121EB866100192673 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				76ECCE3221EB866100192673 /* LoggerFactory.swift */,
+			);
+			name = Factory;
+			path = ../../Sources/BLog/Factory;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		763ED4DA21E3B89D00AFEBEE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763ED4E321E3B89E00AFEBEE /* BLogMock.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		769D6CE921DC28A6008C1836 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				769D6CFF21DC28A6008C1836 /* BLog.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		763ED4DE21E3B89D00AFEBEE /* BLogMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 763ED4E421E3B89E00AFEBEE /* Build configuration list for PBXNativeTarget "BLogMock" */;
+			buildPhases = (
+				763ED4DA21E3B89D00AFEBEE /* Headers */,
+				763ED4DB21E3B89D00AFEBEE /* Sources */,
+				763ED4DC21E3B89D00AFEBEE /* Frameworks */,
+				763ED4DD21E3B89D00AFEBEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				763ED4E821E3B8C400AFEBEE /* PBXTargetDependency */,
+			);
+			name = BLogMock;
+			productName = BLogMock;
+			productReference = 763ED4DF21E3B89D00AFEBEE /* BLogMock.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		769D6CED21DC28A6008C1836 /* BLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 769D6D0221DC28A6008C1836 /* Build configuration list for PBXNativeTarget "BLog" */;
+			buildPhases = (
+				769D6CE921DC28A6008C1836 /* Headers */,
+				769D6CEA21DC28A6008C1836 /* Sources */,
+				769D6CEB21DC28A6008C1836 /* Frameworks */,
+				769D6CEC21DC28A6008C1836 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLog;
+			productName = BLog;
+			productReference = 769D6CEE21DC28A6008C1836 /* BLog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		769D6CF621DC28A6008C1836 /* BLogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 769D6D0521DC28A6008C1836 /* Build configuration list for PBXNativeTarget "BLogTests" */;
+			buildPhases = (
+				769D6CF321DC28A6008C1836 /* Sources */,
+				769D6CF421DC28A6008C1836 /* Frameworks */,
+				769D6CF521DC28A6008C1836 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				769D6CFA21DC28A6008C1836 /* PBXTargetDependency */,
+				763ED56221E43ED900AFEBEE /* PBXTargetDependency */,
+			);
+			name = BLogTests;
+			productName = BLogTests;
+			productReference = 769D6CF721DC28A6008C1836 /* BLogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76ECCE1D21EB7EBB00192673 /* BLogDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76ECCE2F21EB7EBD00192673 /* Build configuration list for PBXNativeTarget "BLogDemo" */;
+			buildPhases = (
+				76ECCE1A21EB7EBB00192673 /* Sources */,
+				76ECCE1B21EB7EBB00192673 /* Frameworks */,
+				76ECCE1C21EB7EBB00192673 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLogDemo;
+			productName = BLogDemo;
+			productReference = 76ECCE1E21EB7EBB00192673 /* BLogDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		769D6CE521DC28A6008C1836 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Valery Fomenko";
+				TargetAttributes = {
+					763ED4DE21E3B89D00AFEBEE = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					769D6CED21DC28A6008C1836 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					769D6CF621DC28A6008C1836 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					76ECCE1D21EB7EBB00192673 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 769D6CE821DC28A6008C1836 /* Build configuration list for PBXProject "BLog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 769D6CE421DC28A6008C1836;
+			productRefGroup = 769D6CEF21DC28A6008C1836 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				769D6CED21DC28A6008C1836 /* BLog */,
+				763ED4DE21E3B89D00AFEBEE /* BLogMock */,
+				769D6CF621DC28A6008C1836 /* BLogTests */,
+				76ECCE1D21EB7EBB00192673 /* BLogDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		763ED4DD21E3B89D00AFEBEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		769D6CEC21DC28A6008C1836 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		769D6CF521DC28A6008C1836 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76ECCE1C21EB7EBB00192673 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76ECCE2B21EB7EBD00192673 /* LaunchScreen.storyboard in Resources */,
+				76ECCE2821EB7EBD00192673 /* Assets.xcassets in Resources */,
+				76ECCE2621EB7EBB00192673 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		763ED4DB21E3B89D00AFEBEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763ED55C21E43EA100AFEBEE /* FormattedLogOutputMock.swift in Sources */,
+				763ED55F21E43EA100AFEBEE /* LoggerMock.swift in Sources */,
+				763ED56021E43EA100AFEBEE /* LogEntryFormatterMock.swift in Sources */,
+				763ED55D21E43EA100AFEBEE /* LogAssemblerMock.swift in Sources */,
+				763ED55E21E43EA100AFEBEE /* LogDestinationMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		769D6CEA21DC28A6008C1836 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763ED51D21E415D000AFEBEE /* LogEntrySource.swift in Sources */,
+				763ED50C21E415D000AFEBEE /* LogEntryFormatter.swift in Sources */,
+				763ED51321E415D000AFEBEE /* FileLogAssembler.swift in Sources */,
+				763ED51E21E415D000AFEBEE /* LogEntry.swift in Sources */,
+				7602904A220644D500698ECC /* StandardLogEntryFormatter.swift in Sources */,
+				763ED51621E415D000AFEBEE /* Log.swift in Sources */,
+				763ED52021E415D000AFEBEE /* FormattedLogWriter.swift in Sources */,
+				763ED51721E415D000AFEBEE /* FormattedLogOutput.swift in Sources */,
+				763ED51021E415D000AFEBEE /* LogFile.swift in Sources */,
+				763ED50D21E415D000AFEBEE /* LogDestination.swift in Sources */,
+				763ED51A21E415D000AFEBEE /* LogExporter.swift in Sources */,
+				763ED51921E415D000AFEBEE /* TextError.swift in Sources */,
+				763ED51B21E415D000AFEBEE /* LogEntryMessage.swift in Sources */,
+				763ED51421E415D000AFEBEE /* FileLogConfiguration.swift in Sources */,
+				763ED51121E415D000AFEBEE /* FileLogOutput.swift in Sources */,
+				763ED51821E415D000AFEBEE /* LogAssembler.swift in Sources */,
+				763ED51F21E415D000AFEBEE /* Logger.swift in Sources */,
+				76ECCE3321EB866100192673 /* LoggerFactory.swift in Sources */,
+				763ED51C21E415D000AFEBEE /* LogEntryMessageKind.swift in Sources */,
+				763ED50F21E415D000AFEBEE /* ConsoleLogOutput.swift in Sources */,
+				763ED51521E415D000AFEBEE /* LogDispatcher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		769D6CF321DC28A6008C1836 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C7599921E8EC0F00FD99AF /* LogDestinationMockSupport.swift in Sources */,
+				7602904D22064D9C00698ECC /* StandardLogEntryFormatterTests.swift in Sources */,
+				763ED55121E415F100AFEBEE /* LogTests.swift in Sources */,
+				763ED56B21E5009700AFEBEE /* Collector.swift in Sources */,
+				763ED54321E415F100AFEBEE /* FileLoggerHeavyLoadTests.swift in Sources */,
+				763ED54821E415F100AFEBEE /* LogEntryFormatterTests.swift in Sources */,
+				763ED54721E415F100AFEBEE /* LogFileTests.swift in Sources */,
+				763ED54621E415F100AFEBEE /* FileLogOutputTests.swift in Sources */,
+				763ED56C21E5009700AFEBEE /* Directory.swift in Sources */,
+				76C759A321E8F0D700FD99AF /* LoggerMockSupport.swift in Sources */,
+				763ED54A21E415F100AFEBEE /* LogExporterTests.swift in Sources */,
+				763ED54021E415F100AFEBEE /* FormattedLogWriterTests.swift in Sources */,
+				76C7599F21E8EF8400FD99AF /* LogLoggingTests.swift in Sources */,
+				763ED54221E415F100AFEBEE /* FileLogConfigurationTests.swift in Sources */,
+				763ED54421E415F100AFEBEE /* FileLogAssemblerTests.swift in Sources */,
+				76C759A021E8EF8400FD99AF /* LogExportingTests.swift in Sources */,
+				763ED54921E415F100AFEBEE /* LogDispatcherTests.swift in Sources */,
+				76C759A721E8F55C00FD99AF /* FormattedLogOutputMockSupport.swift in Sources */,
+				76C7599C21E8EC3E00FD99AF /* LogAssemblerMockSupport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76ECCE1A21EB7EBB00192673 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76ECCE2321EB7EBB00192673 /* ViewController.swift in Sources */,
+				76ECCE2121EB7EBB00192673 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		763ED4E821E3B8C400AFEBEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 769D6CED21DC28A6008C1836 /* BLog */;
+			targetProxy = 763ED4E721E3B8C400AFEBEE /* PBXContainerItemProxy */;
+		};
+		763ED56221E43ED900AFEBEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 763ED4DE21E3B89D00AFEBEE /* BLogMock */;
+			targetProxy = 763ED56121E43ED900AFEBEE /* PBXContainerItemProxy */;
+		};
+		769D6CFA21DC28A6008C1836 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 769D6CED21DC28A6008C1836 /* BLog */;
+			targetProxy = 769D6CF921DC28A6008C1836 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		76ECCE2421EB7EBB00192673 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76ECCE2521EB7EBB00192673 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		76ECCE2921EB7EBD00192673 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76ECCE2A21EB7EBD00192673 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		763ED4E521E3B89E00AFEBEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MNS8R8287U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BLogMock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vlfm.BLogMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		763ED4E621E3B89E00AFEBEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MNS8R8287U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BLogMock/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vlfm.BLogMock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		769D6D0021DC28A6008C1836 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		769D6D0121DC28A6008C1836 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		769D6D0321DC28A6008C1836 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MNS8R8287U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BLog/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vlfm.BLog;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		769D6D0421DC28A6008C1836 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MNS8R8287U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BLog/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vlfm.BLog;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		769D6D0621DC28A6008C1836 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MNS8R8287U;
+				INFOPLIST_FILE = BLogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vlfm.BLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		769D6D0721DC28A6008C1836 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MNS8R8287U;
+				INFOPLIST_FILE = BLogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vlfm.BLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		76ECCE2D21EB7EBD00192673 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MNS8R8287U;
+				INFOPLIST_FILE = BLogDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vlfm.BLogDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76ECCE2E21EB7EBD00192673 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MNS8R8287U;
+				INFOPLIST_FILE = BLogDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vlfm.BLogDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		763ED4E421E3B89E00AFEBEE /* Build configuration list for PBXNativeTarget "BLogMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				763ED4E521E3B89E00AFEBEE /* Debug */,
+				763ED4E621E3B89E00AFEBEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		769D6CE821DC28A6008C1836 /* Build configuration list for PBXProject "BLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				769D6D0021DC28A6008C1836 /* Debug */,
+				769D6D0121DC28A6008C1836 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		769D6D0221DC28A6008C1836 /* Build configuration list for PBXNativeTarget "BLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				769D6D0321DC28A6008C1836 /* Debug */,
+				769D6D0421DC28A6008C1836 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		769D6D0521DC28A6008C1836 /* Build configuration list for PBXNativeTarget "BLogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				769D6D0621DC28A6008C1836 /* Debug */,
+				769D6D0721DC28A6008C1836 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76ECCE2F21EB7EBD00192673 /* Build configuration list for PBXNativeTarget "BLogDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76ECCE2D21EB7EBD00192673 /* Debug */,
+				76ECCE2E21EB7EBD00192673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 769D6CE521DC28A6008C1836 /* Project object */;
+}
